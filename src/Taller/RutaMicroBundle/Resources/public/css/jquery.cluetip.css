@@ -1,0 +1,273 @@
+/* global */
+/* line 3, ../sass/jquery.cluetip.scss */
+div.ui-cluetip {
+  font-size: 1em;
+  border: 1px solid #d5d5d5;
+}
+
+/* line 8, ../sass/jquery.cluetip.scss */
+.ui-cluetip-header, .ui-cluetip-content {
+  padding: 12px;
+}
+
+/* line 12, ../sass/jquery.cluetip.scss */
+.ui-cluetip-header {
+  font-size: 1.3em;
+  margin: 0;
+  overflow: hidden;
+  line-height: 20px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+/* line 20, ../sass/jquery.cluetip.scss */
+.cluetip-title .cluetip-close {
+  float: right;
+  position: relative;
+}
+
+/* line 25, ../sass/jquery.cluetip.scss */
+.cluetip-close img {
+  border: 0;
+}
+
+/* line 29, ../sass/jquery.cluetip.scss */
+#cluetip-waitimage {
+  width: 43px;
+  height: 11px;
+  position: absolute;
+  background-image: url(../../../img/general/tooltips/wait.gif);
+}
+
+/* line 36, ../sass/jquery.cluetip.scss */
+.cluetip-arrows {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -11px;
+  width: 11px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border-width: 0;
+}
+
+/* line 48, ../sass/jquery.cluetip.scss */
+.cluetip-extra {
+  display: none;
+}
+
+/***************************************
+   =cluetipClass: 'default'
+-------------------------------------- */
+/* line 56, ../sass/jquery.cluetip.scss */
+.cluetip-default {
+  background-color: #fff;
+}
+/* line 58, ../sass/jquery.cluetip.scss */
+.cluetip-default .cluetip-outer {
+  background-color: #fff;
+}
+/* line 61, ../sass/jquery.cluetip.scss */
+.cluetip-default .ui-cluetip-header {
+  background-color: #f7f7f7;
+}
+
+/*
+.cluetip-default #cluetip-outer {
+  position: relative;
+  margin: 0;
+  background-color: #d9d9c2;
+}
+.cluetip-default h3#cluetip-title {
+  margin: 0 0 5px;
+  padding: 8px 10px 4px;
+  font-size: 1.1em;
+  font-weight: normal;
+  background-color: #87876a;
+  color: #fff;
+}
+.cluetip-default #cluetip-title a {
+  color: #d9d9c2;
+  font-size: 0.95em;
+}
+.cluetip-default #cluetip-inner {
+  padding: 10px;
+}
+.cluetip-default div#cluetip-close {
+  text-align: right;
+  margin: 0 5px 5px;
+  color: #900;
+}
+*/
+/* default arrows */
+/* line 96, ../sass/jquery.cluetip.scss */
+div.cluetip-default .cluetip-arrows {
+  border-width: 0;
+  background: transparent none;
+}
+/* line 100, ../sass/jquery.cluetip.scss */
+div.clue-right-default .cluetip-arrows {
+  background-image: url(../../../img/general/tooltips/arrowleft.gif);
+}
+/* line 103, ../sass/jquery.cluetip.scss */
+div.clue-left-default .cluetip-arrows {
+  background-image: url(../../../img/general/tooltips/arrowright.gif);
+  left: 100%;
+  margin-right: -11px;
+}
+/* line 108, ../sass/jquery.cluetip.scss */
+div.clue-top-default .cluetip-arrows {
+  background-image: url(../../../img/general/tooltips/arrowdown.gif);
+  top: 100%;
+  left: 50%;
+  margin-left: -11px;
+  width: 22px;
+  height: 11px;
+}
+/* line 116, ../sass/jquery.cluetip.scss */
+div.clue-bottom-default .cluetip-arrows {
+  background-image: url(../../../img/general/tooltips/arrowup.gif);
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  width: 22px;
+  height: 11px;
+}
+
+/***************************************
+   =cluetipClass: 'jtip'
+-------------------------------------- */
+/* line 130, ../sass/jquery.cluetip.scss */
+.cluetip-jtip {
+  background-color: #fff;
+}
+/* line 132, ../sass/jquery.cluetip.scss */
+.cluetip-jtip .cluetip-outer {
+  border: 2px solid #ccc;
+  position: relative;
+  background-color: #fff;
+}
+/* line 137, ../sass/jquery.cluetip.scss */
+.cluetip-jtip .cluetip-inner {
+  padding: 5px;
+  display: inline-block;
+}
+/* line 141, ../sass/jquery.cluetip.scss */
+.cluetip-jtip div.cluetip-close {
+  text-align: right;
+  margin: 0 5px 0;
+  color: #900;
+}
+/* line 146, ../sass/jquery.cluetip.scss */
+.cluetip-jtip .ui-cluetip-header {
+  background-color: #ccc;
+  padding: 6px;
+  /*  margin-bottom: 1em;*/
+}
+
+/* jtip arrows */
+/* line 156, ../sass/jquery.cluetip.scss */
+div.cluetip-jtip .cluetip-arrows {
+  border-width: 0;
+  background: transparent none;
+}
+/* line 160, ../sass/jquery.cluetip.scss */
+div.clue-right-jtip .cluetip-arrows {
+  background-image: url(../../../img/general/tooltips/arrowleft.gif);
+}
+/* line 163, ../sass/jquery.cluetip.scss */
+div.clue-left-jtip .cluetip-arrows {
+  background-image: url(../../../img/general/tooltips/arrowright.gif);
+  left: 100%;
+  margin-right: -11px;
+}
+/* line 168, ../sass/jquery.cluetip.scss */
+div.clue-top-jtip .cluetip-arrows {
+  background-image: url(../../../img/general/tooltips/arrowdown.gif);
+  top: 100%;
+  left: 50%;
+  width: 22px;
+  height: 11px;
+  margin-left: -11px;
+}
+/* line 176, ../sass/jquery.cluetip.scss */
+div.clue-bottom-jtip .cluetip-arrows {
+  background-image: url(../../../img/general/tooltips/arrowup.gif);
+  top: -11px;
+  left: 50%;
+  width: 22px;
+  height: 11px;
+  margin-left: -11px;
+}
+
+/***************************************
+   =cluetipClass: 'rounded'
+-------------------------------------- */
+/* line 190, ../sass/jquery.cluetip.scss */
+.cluetip-rounded {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+/* line 196, ../sass/jquery.cluetip.scss */
+.cluetip-rounded .cluetip-outer {
+  background-color: #fff;
+}
+/* line 199, ../sass/jquery.cluetip.scss */
+.cluetip-rounded .cluetip-arrows {
+  border-color: #ccc;
+}
+
+/* need to be more specific here to override ThemeRoller defaults */
+/* line 207, ../sass/jquery.cluetip.scss */
+div.cluetip-rounded .cluetip-arrows {
+  font-size: 0;
+  line-height: 0%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  background: transparent none;
+}
+/* line 215, ../sass/jquery.cluetip.scss */
+div.clue-right-rounded .cluetip-arrows {
+  border-width: 11px 11px 11px 0;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+/* line 221, ../sass/jquery.cluetip.scss */
+div.clue-left-rounded .cluetip-arrows {
+  left: 100%;
+  margin-right: -11px;
+  border-width: 11px 0 11px 11px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+/* line 229, ../sass/jquery.cluetip.scss */
+div.clue-top-rounded .cluetip-arrows {
+  top: 100%;
+  left: 50%;
+  border-width: 11px 11px 0 11px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+
+/* line 239, ../sass/jquery.cluetip.scss */
+.clue-bottom-rounded .cluetip-arrows {
+  top: -11px;
+  left: 50%;
+  border-width: 0 11px 11px 11px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+}
+
+/* stupid IE6 HasLayout hack */
+/* line 251, ../sass/jquery.cluetip.scss */
+.cluetip-rounded .cluetip-title, .cluetip-rounded .cluetip-inner {
+  zoom: 1;
+}

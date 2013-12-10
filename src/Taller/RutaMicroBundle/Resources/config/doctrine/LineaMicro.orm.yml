@@ -1,0 +1,27 @@
+Taller\RutaMicroBundle\Entity\LineaMicro:
+    type: entity
+    table: linea_micro
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 45
+            fixed: false
+            nullable: true
+        foto:
+            type: string
+            length: 345
+            fixed: false
+            nullable: true
+        descripcion:
+            type: string
+            length: 445
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

@@ -1,0 +1,115 @@
+<?php
+
+namespace Taller\RutaMicroBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * LineaMicro
+ */
+class LineaMicro
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     */
+    private $foto;
+
+    /**
+     * @var string
+     */
+    private $descripcion;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     * @return LineaMicro
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+    
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set foto
+     *
+     * @param string $foto
+     * @return LineaMicro
+     */
+    public function setFoto($foto)
+    {
+        $this->foto = $foto;
+    
+        return $this;
+    }
+
+    /**
+     * Get foto
+     *
+     * @return string 
+     */
+    public function getFoto()
+    {
+        return $this->foto;
+    }
+
+    /**
+     * Set descripcion
+     *
+     * @param string $descripcion
+     * @return LineaMicro
+     */
+    public function setDescripcion($descripcion)
+    {
+        $this->descripcion = $descripcion;
+    
+        return $this;
+    }
+
+    /**
+     * Get descripcion
+     *
+     * @return string 
+     */
+    public function getDescripcion()
+    {
+        return $this->descripcion;
+    }
+
+    public function __toString(){
+        return $this->getNombre();
+    }
+}

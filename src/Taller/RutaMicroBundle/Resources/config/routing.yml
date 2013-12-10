@@ -1,0 +1,65 @@
+ruta_micro_homepage:
+    pattern:  /
+    defaults: { _controller: RutaMicroBundle:Default:index }
+
+usuario_login:
+  pattern: /login
+  defaults: { _controller: RutaMicroBundle:Usuario:login }
+
+usuario_login_check:
+  pattern: /login_check
+
+usuario_logout:
+  pattern: /logout    
+
+consultar_ruta:
+    pattern:  /usuario/consultar-ruta/{linea}/{calle}
+    defaults: { _controller: RutaMicroBundle:ConsultarRuta:consultarRuta, linea: null, calle: null }
+
+RutaMicroBundle_lineamicro:
+    resource: "@RutaMicroBundle/Resources/config/routing/lineamicro.yml"
+    prefix:   /admin/lineamicro
+
+RutaMicroBundle_calle:
+    resource: "@RutaMicroBundle/Resources/config/routing/calle.yml"
+    prefix:   /admin/calle
+
+RutaMicroBundle_lugar:
+    resource: "@RutaMicroBundle/Resources/config/routing/lugar.yml"
+    prefix:   /admin/lugar
+
+RutaMicroBundle_roles:
+    resource: "@RutaMicroBundle/Resources/config/routing/roles.yml"
+    prefix:   /admin/roles
+
+RutaMicroBundle_usuario:
+    resource: "@RutaMicroBundle/Resources/config/routing/usuario.yml"
+    prefix:   /admin/gestion-usuarios
+
+RutaMicroBundle_ruta:
+    resource: "@RutaMicroBundle/Resources/config/routing/ruta.yml"
+    prefix:   /admin/ruta
+
+RutaMicroBundle_entidad:
+    resource: "@RutaMicroBundle/Resources/config/routing/entidad.yml"
+    prefix:   /entidad
+    
+RutaMicroBundle_sucursal:
+    resource: "@RutaMicroBundle/Resources/config/routing/sucursal.yml"
+    prefix:   /sucursal
+    
+RutaMicroBundle_ticket:
+    resource: "@RutaMicroBundle/Resources/config/routing/ticket.yml"
+    prefix:   /ticket
+    
+RutaMicroBundle_horario:
+    resource: "@RutaMicroBundle/Resources/config/routing/horario.yml"
+    prefix:   /horario
+
+RutaMicroBundle_caja:
+    resource: "@RutaMicroBundle/Resources/config/routing/caja.yml"
+    prefix:   /caja
+    
+RutaMicroBundle_servicio:
+    resource: "@RutaMicroBundle/Resources/config/routing/servicio.yml"
+    prefix:   /servicio    

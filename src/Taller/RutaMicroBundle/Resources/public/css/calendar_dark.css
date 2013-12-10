@@ -1,0 +1,135 @@
+/*
+	glDatePicker dark style
+
+	http://code.gautamlad.com/glDatePicker/
+	https://github.com/glad/glDatePicker/
+*/
+/* line 8, ../sass/calendar_dark.scss */
+#date_dark-gldp {
+  z-index: 100;
+}
+
+/* Calendar container div */
+/* line 14, ../sass/calendar_dark.scss */
+.gldp-dark {
+  float: left;
+  font-family: "trebuchet ms" !important;
+  background: url("../../../img/bg/content_bg.png");
+  font-size: 0.8em !important;
+  border: solid 1px #5c5c5c;
+}
+/* line 20, ../sass/calendar_dark.scss */
+.gldp-dark table {
+  border-spacing: 1px;
+  border-collapse: inherit;
+}
+/* line 24, ../sass/calendar_dark.scss */
+.gldp-dark tr {
+  line-height: 28px;
+}
+/* line 27, ../sass/calendar_dark.scss */
+.gldp-dark td {
+  margin: 0;
+  padding: 0;
+  width: 33px;
+  text-align: center;
+}
+
+/* Table style */
+/* dark row height */
+/* dark style of cell */
+/* Previous and Next arrows */
+/* line 43, ../sass/calendar_dark.scss */
+.gldp-dark-prevnext {
+  font-family: "times new roman";
+  color: #B0B0B0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Month Year title */
+/* line 52, ../sass/calendar_dark.scss */
+.gldp-dark-monyear {
+  color: #B0B0B0;
+  font-size: 0.9em !important;
+  font-weight: bold;
+}
+
+/* Days of the week (Sun, Mon, ...) */
+/* line 60, ../sass/calendar_dark.scss */
+.gldp-dark-dow {
+  background-color: #333;
+  color: #fff;
+  font-size: 0.8em !important;
+  font-weight: bold;
+}
+
+/* Selectable days */
+/* line 69, ../sass/calendar_dark.scss */
+.gldp-dark-day {
+  background: #5c5c5c;
+  color: #B0B0B0;
+  border: solid 1px #5c5c5c;
+  font-weight: bold;
+}
+
+/* line 76, ../sass/calendar_dark.scss */
+.gldp-dark-day-hover {
+  background-color: #424242;
+  color: #B0B0B0;
+  border: 1px solid #585858;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Selected days */
+/* line 86, ../sass/calendar_dark.scss */
+.gldp-dark-selected {
+  background-color: #494949;
+  color: #B0B0B0;
+  border: 1px solid #585858;
+}
+
+/* Today */
+/* line 94, ../sass/calendar_dark.scss */
+.gldp-dark-today {
+  background: url("../../../img/bg/content_bg_light.png");
+  color: #383838;
+  border: 1px solid #D5D5D5;
+  font-weight: bold;
+}
+
+/* line 101, ../sass/calendar_dark.scss */
+.gldp-dark-today-hover {
+  background: #F8F8F8;
+  color: #383838;
+  border: 1px solid #D5D5D5;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Weekends */
+/* line 111, ../sass/calendar_dark.scss */
+.gldp-dark-sat, .gldp-dark-sun {
+  background: #5c5c5c;
+  color: #2d2d2d;
+  border: solid 1px #5c5c5c;
+  font-weight: bold;
+}
+
+/* line 118, ../sass/calendar_dark.scss */
+.gldp-dark-sat-hover, .gldp-dark-sun-hover {
+  background: #5c5c5c;
+  color: #2d2d2d;
+  border: 1px solid #444;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Non-selectable day.  Includes:previous/next month days and days that fall in the allowOld and endDate conditions */
+/* line 128, ../sass/calendar_dark.scss */
+.gldp-dark-noday {
+  background: #5c5c5c;
+  border: solid 1px #5c5c5c;
+  color: #8D8C8C;
+}

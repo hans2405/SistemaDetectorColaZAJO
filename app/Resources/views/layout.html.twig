@@ -1,0 +1,289 @@
+{% extends '::base.html.twig' %}
+{% block css %}
+
+<!-- ===================== CSS ===================== -->    
+<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>     -->
+<link href="{{ asset('bundles/rutamicro/css/bootstrap.min.css') }}" rel="stylesheet"/>
+<link href="{{ asset('bundles/rutamicro/css/bootstrap-responsive.min.css') }}" rel="stylesheet"/>
+
+<!-- Site specific - CSS --> 
+
+
+<link href="{{ asset('bundles/rutamicro/css/validationEngine.jquery.css') }}" rel="stylesheet"/>
+
+<link href="{{ asset('bundles/rutamicro/css/prettify.css') }}" rel="stylesheet"/>
+<link href="{{ asset('bundles/rutamicro/css/dataTables.css') }}" rel="stylesheet"/>
+<link href="{{ asset('bundles/rutamicro/css/fullcalendar.css') }}" rel="stylesheet"/>
+<link href="{{ asset('bundles/rutamicro/css/fullcalendar.print.css') }}" rel="stylesheet"/>
+<link href="{{ asset('bundles/rutamicro/css/chosen.css') }}" rel="stylesheet"/>
+<link href="{{ asset('bundles/rutamicro/css/dropkick.css') }}" rel="stylesheet"/>
+<link href="{{ asset('bundles/rutamicro/css/jquery-ui-1.8.20.custom.css') }}" rel="stylesheet"/>
+
+<!-- Common - CSS -->     
+<link href="{{ asset('bundles/rutamicro/css/common.css') }}" rel="stylesheet"/>
+<link href="{{ asset('bundles/rutamicro/css/theme_light.css') }}" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+
+
+      {% endblock %}
+
+      {% block body %}
+      <!-- gif loading -->
+      <!-- <div id="loader_cont"><img src="img/loaders/page_loader.gif"></div>  -->
+      <!-- end gif loading -->
+
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>
+            </a>
+            <div class="nav-collapse">            
+<!--             <ul class="nav main_nav" role="navigation">                
+                <li id="mail" class="styled dropdown mail">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mail<span></span></a>
+                  <ul class="dropdown-menu top_menu">
+                      <li><a class="mn_new_msg" href="mail.html"><span>New Message</span></a></li>
+                      <li><a class="mn_inbox" href="mail.html"><span>Inbox</span></a></li>
+                      <li><a class="mn_outbox" href="mail.html"><span>OutBox</span></a></li>
+                      <li><a class="mn_spam" href="mail.html"><span>Spam</span></a></li>
+                      <li><a class="mn_trash" href="mail.html"><span>Trash</span></a></li>
+                  </ul>
+                </li>
+                       
+              </ul>  -->
+
+              <ul class="main_nav nav pull-right">                
+                <li id="search" class="search"> 
+                  <a href="#">Buscar</a> 
+                  <div class="search_cont">
+                    <form class="navbar-search form-search">                          
+                      <input type="text" class="input-medium search-query" placeholder="Search">
+                      <button type="submit">Buscar</button>
+                    </form> 
+                  </div>              
+                </li> 
+                <li id="settings" class="styled dropdown settings">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Configuracion</a>
+                  <ul class="dropdown-menu top_menu">
+                    <li class="show_all">Configuracion</li>
+                    <li><a class="mn_site" href="#"><span>Sitio</span></a></li>
+                     <!--    <li><a class="mn_admin" href="#"><span>Admin</span></a></li>
+                        <li><a class="mn_mail" href="#"><span>Mail</span></a></li>
+                        <li><a class="mn_user" href="#"><span>User</span></a></li> -->
+                      </ul>
+                    </li>
+                    <li id="profile" class="styled dropdown profile">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Perfil</a>
+                      <ul class="dropdown-menu top_menu">                        
+                        <li class="profile group">
+                          <img src="{{ asset('bundles/rutamicro/img/general/user_1.jpg') }}" width="50" height="50" alt="User">
+                          <ul>
+                            <li><strong>{{ app.user.nombre ~ ' ' ~ app.user.apellidos}}</strong></li>
+                            <li>{{ app.user.email }}</li>
+                            <li><span></span></li>
+                          </ul>
+                        </li>
+                        <li><a class="mn_settings" href="#"><span>Mi configuracion</span></a></li>
+                        <li><a class="mn_profile" href="#"><span>Mi perfil</span></a></li>
+                        <li><a class="mn_logout" href="{{ path('usuario_logout')}}"><span>Cerrar session</span></a></li>
+                      </ul>
+                    </li>                          
+                  </ul>           
+                </div>
+
+                <h1 class="brand"><a href="{{ path('ruta_micro_homepage')}}">Detector de Colas ZAJO</a></h1>                                       
+              </div>
+            </div>
+          </div>
+
+          <div class="container">      
+
+            <div class="main_content row-fluid">
+
+              {% if is_granted('ROLE_ADMIN') %}
+              <div class="span3">
+                <div class="side_nav sidebar-nav" data-spy="affix" data-offset-top="150">
+                  <!-- Cuadro de busqueda -->
+<!--             <div class="sidebar_widget first_widget group">
+              <form class="sidebar_search form-search">
+                <input type="text" class="input-medium search-query" placeholder="Quick search">
+                <button type="submit" class="btn btn-inverse"><i class="icon-search icon-gray"></i></button>
+              </form>
+            </div> -->
+            <h3 class="main_menu group">
+              <span class="title">Main Menu</span>
+              <a id="nav_list_btn" class="btn-collapse btn btn-inverse">
+                <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>              
+              </a>
+            </h3>
+            <ul class="nav nav-list">                          
+              <li class="active"><a class="home" href="{{ path('ruta_micro_homepage')}}">Inicio</a></li>
+              <li class="sub">
+                <a class="forms" href="#">Opciones</a>
+                <ul>
+                  <li><a href="{{ path('entidad')}}">Listar Entidades</a></li>
+                  <li><a href="{{ path('sucursal')}}">Listar Sucursal</a></li>
+                  <li><a href="{{ path('horario')}}">Listar Horarios</a></li>
+                  <li><a href="{{ path('caja')}}">Listar Cajas</a></li>
+                  <li><a href="{{ path('servicio')}}">Listar Servicios</a></li>
+                </ul>
+              </li>   
+              
+              <!-- <li><a class="charts" href="charts.html">Charts</a></li>              -->
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        {% endif %}
+
+        {% if is_granted('ROLE_USER') and not is_granted('ROLE_ADMIN') %}
+        <div class="span2">
+          <div class="side_nav sidebar-nav" data-spy="affix" data-offset-top="150">
+            <!-- Cuadro de busqueda -->
+<!--             <div class="sidebar_widget first_widget group">
+              <form class="sidebar_search form-search">
+                <input type="text" class="input-medium search-query" placeholder="Quick search">
+                <button type="submit" class="btn btn-inverse"><i class="icon-search icon-gray"></i></button>
+              </form>
+            </div> -->
+            <h3 class="main_menu group">
+              <span class="title">Main Menu</span>
+              <a id="nav_list_btn" class="btn-collapse btn btn-inverse">
+                <span class="sweet-gray sweet-go-back-from-screen">&nbsp;</span>              
+              </a>
+            </h3>
+            <ul class="nav nav-list">                          
+              <li class="active"><a class="home" href="{{ path('ruta_micro_homepage')}}">Inicio</a></li>
+
+              <li><a href="{{ path('consultar_ruta')}}">Visualizar Sucursales en Mapa</a></li>
+              
+              <!-- <li><a class="charts" href="charts.html">Charts</a></li>              -->
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        {% endif %}
+
+
+        <div class="span9">
+          <div class="row-fluid">
+            <div class="span12">
+             {% block section_main %} 
+
+             <ul class="breadcrumb br_styled no_space">                              
+              <li class="active">{{ block('title') }}</li>
+            </ul> 
+
+            <ul class="page_info">
+              <!-- <li><h2>Notica</h2></li> -->
+
+              {% block section %}
+              {% endblock %}
+
+            </ul>
+
+<!--               <div class="widget chart">
+                <header>
+                  <h3>Gestionar ruta <span>- rutas</span></h3>
+                  <ul class="toggle_content">                          
+                    <li class="arrow"><a href="#">Toggle Content</a></li>
+                  </ul>
+                </header>
+                <section>
+                  <div>
+
+                   </div>                
+                </section>
+              </div> -->
+              {% endblock %}
+            </div>                  
+          </div><!--/row-->
+
+          
+        </div><!--/span-->
+      </div><!--/row-->      
+      <hr>
+
+      <footer>
+        <p>&copy; by ZAJO - 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+    {% endblock %}
+
+    {% block javascripts  %}
+    <!-- ===================== JS ===================== -->
+    <script src="{{ asset('bundles/rutamicro/js/libs/jquery-1.7.2.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/libs/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/libs/ios-orientationchange-fix.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/libs/jquery-ui-1.8.20.custom.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/widgets/jquery.sparkline.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/common.js') }}"></script>
+
+    <!-- Site specific - JS -TABLES --> 
+
+    <script src="{{ asset('bundles/rutamicro/js/plugins/tables/colResizable-1.3.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/tables/jquery.tablesorter.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/specific/tables_advanced.js') }}"></script>
+
+    <!-- LOGIN -->  
+
+    <script src="{{ asset('bundles/rutamicro/js/plugins/filevalidation/languages/jquery.validationEngine-en.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/specific/login.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/filevalidation/jquery.validationEngine.js') }}"></script>
+
+    <!-- Site specific - JS FORMULARIOS --> 
+
+    <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/jquery.maskedinput-1.3.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/jquery.multi-select.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/jquery.quicksearch.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/jquery.autogrowtextarea.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/jquery.textareaCounter.plugin.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/ui.spinner.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/jquery.ibutton.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/jquery.metadata.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/specific/forms_elements.js') }}"></script>
+
+    <!-- Site specific --> 
+
+    <script src="{{ asset('bundles/rutamicro/js/libs/prettify.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/charts/jquery.flot.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/charts/jquery.flot.resize.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/charts/jquery.flot.pie.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/charts/jquery.flot.stack.min.js') }}"></script>
+    <script src="{{ asset('bundles/rutamicro/js/plugins/charts/jquery.flot.symbol.min.js') }}"></script>
+
+    <!--[if lt IE 9]>      
+          <script type="text/javascript" src="js/plugins/charts/excanvas.min.js"></script>
+          <![endif]-->    
+
+          <script src="{{ asset('bundles/rutamicro/js/plugins/tables/jquery.dataTables.min.js') }}"></script>
+          <script src="{{ asset('bundles/rutamicro/js/plugins/calendar/fullcalendar.min.js') }}"></script>
+          <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/chosen.jquery.min.js') }}"></script>
+          <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/scrollability.min.js') }}"></script>
+          <script src="{{ asset('bundles/rutamicro/js/plugins/formselements/jquery.dropkick-1.0.0.js') }}"></script>
+
+          <script src="{{ asset('bundles/rutamicro/js/script.js') }}"></script>
+          <script src="{{ asset('bundles/rutamicro/js/specific/sparks.js') }}"></script>
+          <script src="{{ asset('bundles/rutamicro/js/specific/index.js') }}"></script>
+
+          <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-31818910-2']);
+          _gaq.push(['_setDomainName', 'loxdesign.net']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+          </script>
+
+          {% endblock %}

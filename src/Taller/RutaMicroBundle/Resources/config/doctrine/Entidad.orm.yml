@@ -1,0 +1,27 @@
+Taller\RutaMicroBundle\Entity\Entidad:
+    type: entity
+    table: entidad
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 70
+            fixed: false
+            nullable: false
+        descripcion:
+            type: string
+            length: 150
+            fixed: false
+            nullable: false
+        rubro:
+            type: string
+            length: 50
+            fixed: false
+            nullable: false
+    lifecycleCallbacks: {  }

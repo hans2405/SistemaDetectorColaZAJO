@@ -1,0 +1,38 @@
+Taller\RutaMicroBundle\Entity\Calle:
+    type: entity
+    table: calle
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 245
+            fixed: false
+            nullable: true
+        distancia:
+            type: integer
+            unsigned: false
+            nullable: true
+    manyToMany:
+        lugar:
+            targetEntity: Lugar
+            cascade: {  }
+            mappedBy: null
+            inversedBy: calle
+            joinTable:
+                name: lugar_calle
+                joinColumns:
+                    -
+                        name: calle_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: lugar_id
+                        referencedColumnName: id
+            orderBy: null
+    lifecycleCallbacks: {  }

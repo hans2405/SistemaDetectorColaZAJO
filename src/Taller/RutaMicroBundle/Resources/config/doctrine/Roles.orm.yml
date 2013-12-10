@@ -1,0 +1,17 @@
+Taller\RutaMicroBundle\Entity\Roles:
+    type: entity
+    table: roles
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 245
+            fixed: false
+            nullable: true
+    lifecycleCallbacks: {  }

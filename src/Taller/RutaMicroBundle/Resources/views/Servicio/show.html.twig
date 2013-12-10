@@ -1,0 +1,35 @@
+{% extends '::layout.html.twig' %}
+{% block title %}Servicio{% endblock %}
+
+{% block section%}
+
+    <table class="table-hover table-condensed">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ entity.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Estado</th>
+                <td>{{ entity.estado }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('servicio') }}">
+            Volver a la Lista de Servicios
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('servicio_edit', { 'id': entity.id }) }}">
+            Modificar Servicio
+        </a>
+    </li>
+</ul>
+{% endblock %}

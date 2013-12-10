@@ -1,0 +1,51 @@
+{% extends '::layout.html.twig' %}
+{% block title %}Detalle de la linea{% endblock %}
+{% block section_main %}
+<ul class="breadcrumb br_styled no_space">                              
+                <li class="active">{{ block('title') }}</li>
+              </ul> 
+
+
+<div class="row-fluid page_info">
+    <div class="span6">
+    <table class="table_basic">
+        <tbody>
+           
+            <tr>
+                <th>Nombre</th>
+                <td>{{ entity.nombre }}</td>
+            </tr>     
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ entity.descripcion }}</td>
+            </tr>
+           
+        </tbody>
+    </table>
+
+ <br>
+        <a href="{{ path('lineamicro') }}">
+            Ir a la lista
+        </a>
+<br>
+        <form action="{{ path('lineamicro_delete', { 'id': entity.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <br>
+            
+            <button style="width:100px" class="btn btn-danger" type="submit">Eliminar</button>
+            <a class="btn btn-danger" href="{{ path('lineamicro_edit', { 'id': entity.id }) }}">
+            Editar
+            </a>
+        </form>
+    
+</ul>
+</div>
+
+<div class="span6">
+    <h4>foto:</h4>
+     <img src="http://images.evisos.com.bo/2012/10/19/micro-en-venta-de-ocacion-modelo-90-techo_755ef5b3c_3.jpg" width="400" heigth="220" alt="">           
+            
+</div>
+</div>
+{% endblock %}

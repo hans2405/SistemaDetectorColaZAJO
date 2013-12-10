@@ -1,0 +1,30 @@
+ticket:
+    pattern:  /
+    defaults: { _controller: "RutaMicroBundle:Ticket:index" }
+
+ticket_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RutaMicroBundle:Ticket:show" }
+
+ticket_new:
+    pattern:  /new
+    defaults: { _controller: "RutaMicroBundle:Ticket:new" }
+
+ticket_create:
+    pattern:  /create
+    defaults: { _controller: "RutaMicroBundle:Ticket:create" }
+    requirements: { _method: post }
+
+ticket_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RutaMicroBundle:Ticket:edit" }
+
+ticket_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RutaMicroBundle:Ticket:update" }
+    requirements: { _method: post|put }
+
+ticket_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RutaMicroBundle:Ticket:delete" }
+    requirements: { _method: post|delete }

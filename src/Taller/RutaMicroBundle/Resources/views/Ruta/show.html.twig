@@ -1,0 +1,50 @@
+{% extends '::layout.html.twig' %}
+{% block title %}Detalle de ruta{% endblock %}
+{% block section%}
+    <h2>{{ block('title') }}</h2>
+
+<div class="row">
+    <div class="span6">
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Posicion</th>
+                <td>{{ entity.posicion }}</td>
+            </tr>
+            <tr>
+                <th>Latitud</th>
+                <td>{{ entity.latitud }}</td>
+            </tr>
+            <tr>
+                <th>Longitud</th>
+                <td>{{ entity.longitud }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('ruta') }}">
+            Ir a la lista
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('ruta_edit', { 'id': entity.id }) }}">
+            Editar
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('ruta_delete', { 'id': entity.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <button type="submit">Eliminar</button>
+        </form>
+    </li>
+</ul>
+</div>
+</div>
+{% endblock %}

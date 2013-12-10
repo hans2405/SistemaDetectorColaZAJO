@@ -1,0 +1,26 @@
+{% extends '::layout.html.twig' %}
+{% block title %}Registro nuevo{% endblock %}
+{% block section%}
+
+<div class="row">
+    <div class="span3"></div>
+    <div class="span4">
+    <h2>{{ block('title') }}</h2>
+
+    <form action="{{ path('lugar_create') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <p>
+            <button type="submit">Registrar</button>
+        </p>
+    </form>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('lugar') }}">
+            Ir a la lista
+        </a>
+    </li>
+</ul>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends '::layout.html.twig' %}
+{% block title %}Lugares{% endblock %}
+{% block section%}
+    <h2>{{ block('title') }}</h2>
+
+    <table id="example" cellpadding="0" cellspacing="0" border="0" class="display">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Foto</th>
+                <th>Descripcion</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('lugar_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.foto }}</td>
+                <td>{{ entity.descripcion }}</td>
+                <td>
+                
+                        <a href="{{ path('lugar_show', { 'id': entity.id }) }}">ver</a>
+                   
+                        <a href="{{ path('lugar_edit', { 'id': entity.id }) }}">editar</a>
+                
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <br>
+            <a class="btn btn-primary" href="{{ path('lugar_new') }}">
+                Nuevo Lugar
+            </a>
+      
+    {% endblock %}

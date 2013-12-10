@@ -1,0 +1,35 @@
+Taller\RutaMicroBundle\Entity\Lugar:
+    type: entity
+    table: lugar
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 245
+            fixed: false
+            nullable: true
+        foto:
+            type: string
+            length: 345
+            fixed: false
+            nullable: true
+        descripcion:
+            type: string
+            length: 245
+            fixed: false
+            nullable: true
+    manyToMany:
+        calle:
+            targetEntity: Calle
+            cascade: {  }
+            mappedBy: lugar
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

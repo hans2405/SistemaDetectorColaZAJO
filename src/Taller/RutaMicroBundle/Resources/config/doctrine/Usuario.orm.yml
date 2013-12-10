@@ -1,0 +1,67 @@
+Taller\RutaMicroBundle\Entity\Usuario:
+    type: entity
+    table: usuario
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 245
+            fixed: false
+            nullable: true
+        apellidos:
+            type: string
+            length: 245
+            fixed: false
+            nullable: true
+        email:
+            type: string
+            length: 245
+            fixed: false
+            nullable: true
+        password:
+            type: string
+            length: 245
+            fixed: false
+            nullable: true
+        salt:
+            type: string
+            length: 245
+            fixed: false
+            nullable: true
+        direccion:
+            type: text
+            nullable: true
+        fechaAlta:
+            type: datetime
+            nullable: true
+            column: fecha_alta
+        fechaNacimiento:
+            type: datetime
+            nullable: true
+            column: fecha_nacimiento
+        ci:
+            type: integer
+            unsigned: false
+            nullable: true
+        foto:
+            type: string
+            length: 345
+            fixed: false
+            nullable: true
+    manyToOne:
+        roles:
+            targetEntity: Roles
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                roles_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

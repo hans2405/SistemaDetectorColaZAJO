@@ -1,0 +1,42 @@
+Taller\RutaMicroBundle\Entity\Ticket:
+    type: entity
+    table: ticket
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nro:
+            type: string
+            length: 20
+            fixed: false
+            nullable: true
+        fechaHoraEmision:
+            type: datetime
+            nullable: false
+            column: fecha_hora_emision
+        fechaHoraAtencion:
+            type: datetime
+            nullable: false
+            column: fecha_hora_atencion
+        fechaHoraFinalizacion:
+            type: datetime
+            nullable: false
+            column: fecha_hora_finalizacion
+        estado:
+            type: boolean
+            nullable: true
+    manyToOne:
+        sucursal:
+            targetEntity: Sucursal
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                sucursal_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

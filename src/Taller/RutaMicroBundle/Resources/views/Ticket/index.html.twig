@@ -1,0 +1,50 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Lista de Tickets{% endblock %}
+
+{% block section %}
+
+    <table id="example" cellpadding="0" cellspacing="0" border="0" class="display">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nro</th>
+                <th>Fecha Hora Emision</th>
+                <th>Fecha Hora Atencion</th>
+                <th>Fecha Hora Finalizacion</th>
+                <th>Estado</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('ticket_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nro }}</td>
+                <td>{% if entity.fechaHoraEmision %}{{ entity.fechaHoraEmision|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.fechaHoraAtencion %}{{ entity.fechaHoraAtencion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.fechaHoraFinalizacion %}{{ entity.fechaHoraFinalizacion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.estado }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('ticket_show', { 'id': entity.id }) }}"> Ver </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('ticket_edit', { 'id': entity.id }) }}"> Modificar </a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+<br>
+
+        <ul>
+            <a class="btn btn-primary" href="{{ path('ticket_new') }}">
+                Registrar Ticket
+            </a>
+    </ul>
+    {% endblock %}

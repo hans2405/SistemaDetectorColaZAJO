@@ -1,0 +1,30 @@
+Taller\RutaMicroBundle\Entity\Servicio:
+    type: entity
+    table: servicio
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        nombre:
+            type: string
+            length: 80
+            fixed: false
+            nullable: false
+        estado:
+            type: boolean
+            nullable: false
+    manyToOne:
+        sucursal:
+            targetEntity: Sucursal
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                sucursal_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

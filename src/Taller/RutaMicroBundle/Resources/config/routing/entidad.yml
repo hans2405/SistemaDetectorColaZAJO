@@ -1,0 +1,30 @@
+entidad:
+    pattern:  /
+    defaults: { _controller: "RutaMicroBundle:Entidad:index" }
+
+entidad_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RutaMicroBundle:Entidad:show" }
+
+entidad_new:
+    pattern:  /new
+    defaults: { _controller: "RutaMicroBundle:Entidad:new" }
+
+entidad_create:
+    pattern:  /create
+    defaults: { _controller: "RutaMicroBundle:Entidad:create" }
+    requirements: { _method: post }
+
+entidad_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RutaMicroBundle:Entidad:edit" }
+
+entidad_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RutaMicroBundle:Entidad:update" }
+    requirements: { _method: post|put }
+
+entidad_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RutaMicroBundle:Entidad:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,54 @@
+{% extends '::layout.html.twig' %}
+{% block title %}Rutas{% endblock %}
+{% block section%}
+<h2>Linea: </h2>
+
+<form name="form1" action="" method="post">
+    <select name="linea" data-placeholder="Elija una linea..." class="chzn-select" style="width:220px;" tabindex="2">
+        <option value="#"></option>
+        {% for linea in lineaMicros %}
+        <option value="{{ linea.nombre }}">{{ linea.nombre }}</option> 
+        {% endfor %}
+    </select>
+    <input type="submit" name="boton" value="mostrar ruta" class="btn" />
+</form>
+
+<table id="example" cellpadding="0" cellspacing="0" border="0" class="display">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Posicion</th>
+            <th>Calle</th>
+            <th>Linea</th>
+            <th>Latitud</th>
+            <th>Longitud</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('ruta_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.posicion }}</td>
+            <td>{{ entity.calle }}</td>
+            <td>{{ entity.lineaMicro }}</td>
+            <td>{{ entity.latitud }}</td>
+            <td>{{ entity.longitud }}</td>
+            <td>
+
+                <a href="{{ path('ruta_show', { 'id': entity.id }) }}">ver</a>
+                ,
+                <a href="{{ path('ruta_edit', { 'id': entity.id }) }}">editar</a>
+
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<br>
+<a class="btn btn-primary" href="{{ path('ruta_new') }}">
+    Nueva ruta
+</a>
+
+{% endblock %}

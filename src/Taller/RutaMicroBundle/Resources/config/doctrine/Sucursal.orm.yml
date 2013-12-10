@@ -1,0 +1,46 @@
+Taller\RutaMicroBundle\Entity\Sucursal:
+    type: entity
+    table: sucursal
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        descripcion:
+            type: string
+            length: 100
+            fixed: false
+            nullable: false
+        abreviacion:
+            type: string
+            length: 30
+            fixed: false
+            nullable: false
+        ubicacion:
+            type: string
+            length: 250
+            fixed: false
+            nullable: false
+        latitud:
+            type: decimal
+            nullable: false
+        longitud:
+            type: decimal
+            nullable: false
+        estado:
+            type: boolean
+            nullable: false
+    manyToOne:
+        entidad:
+            targetEntity: Entidad
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                entidad_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

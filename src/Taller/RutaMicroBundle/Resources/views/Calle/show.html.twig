@@ -1,0 +1,42 @@
+{% extends '::layout.html.twig' %}
+{% block title %}Detalle de la Calle{% endblock %}
+{% block section%}
+    <h2>{{ block('title') }}</h2>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ entity.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Distancia</th>
+                <td>{{ entity.distancia }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('calle') }}">
+            Ir a la lista
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('calle_edit', { 'id': entity.id }) }}">
+            Editar
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('calle_delete', { 'id': entity.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <button type="submit">Eliminar</button>
+        </form>
+    </li>
+</ul>
+{% endblock %}

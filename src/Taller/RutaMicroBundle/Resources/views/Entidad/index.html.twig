@@ -1,0 +1,46 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Lista de Entidades{% endblock %}
+
+{% block section %}
+
+<table id="example" cellpadding="0" cellspacing="0" border="0" class="display">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Rubro</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('entidad_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.descripcion }}</td>
+                <td>{{ entity.rubro }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('entidad_show', { 'id': entity.id }) }}">Ver</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('entidad_edit', { 'id': entity.id }) }}">Modificar</a>
+                        </li>
+                    </ul>                                                   
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+    
+    <ul>
+        <a class="btn btn-primary" href="{{ path('entidad_new') }}">
+            Registrar Entidad
+        </a>
+    </ul>
+{% endblock %}

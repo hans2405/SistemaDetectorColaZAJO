@@ -1,0 +1,7 @@
+parameters:
+#    ruta_micro.example.class: Taller\RutaMicroBundle\Example
+
+services:
+#    ruta_micro.example:
+#        class: %ruta_micro.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

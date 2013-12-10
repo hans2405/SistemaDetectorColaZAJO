@@ -1,0 +1,48 @@
+{% extends '::layout.html.twig' %}
+
+{% block title %}Lista de Horarios{% endblock %}
+
+{% block section %}
+
+<table id="example" cellpadding="0" cellspacing="0" border="0" class="display">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Hora Apertura</th>
+            <th>Hora Cierre</th>
+            <th>Dias</th>
+            <th>Estado</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('horario_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.horaApertura }}</td>
+                <td>{{ entity.horaCierre }}</td>
+                <td>{{ entity.dias }}</td>
+                <td>{{ entity.estado }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('horario_show', { 'id': entity.id }) }}">Ver</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('horario_edit', { 'id': entity.id }) }}">Modificar</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+
+    <ul>
+        <a class="btn btn-primary" href="{{ path('horario_new') }}">
+            Registrar Horario
+        </a>
+    </ul>
+    {% endblock %}

@@ -1,0 +1,38 @@
+Taller\RutaMicroBundle\Entity\Horario:
+    type: entity
+    table: horario
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        horaApertura:
+            type: time
+            nullable: false
+            column: hora_apertura
+        horaCierre:
+            type: time
+            nullable: false
+            column: hora_cierre
+        dias:
+            type: string
+            length: 80
+            fixed: false
+            nullable: false
+        estado:
+            type: boolean
+            nullable: false
+    manyToOne:
+        sucursal:
+            targetEntity: Sucursal
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                sucursal_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

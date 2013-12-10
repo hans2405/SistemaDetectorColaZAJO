@@ -1,0 +1,30 @@
+servicio:
+    pattern:  /
+    defaults: { _controller: "RutaMicroBundle:Servicio:index" }
+
+servicio_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RutaMicroBundle:Servicio:show" }
+
+servicio_new:
+    pattern:  /new
+    defaults: { _controller: "RutaMicroBundle:Servicio:new" }
+
+servicio_create:
+    pattern:  /create
+    defaults: { _controller: "RutaMicroBundle:Servicio:create" }
+    requirements: { _method: post }
+
+servicio_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RutaMicroBundle:Servicio:edit" }
+
+servicio_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RutaMicroBundle:Servicio:update" }
+    requirements: { _method: post|put }
+
+servicio_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RutaMicroBundle:Servicio:delete" }
+    requirements: { _method: post|delete }

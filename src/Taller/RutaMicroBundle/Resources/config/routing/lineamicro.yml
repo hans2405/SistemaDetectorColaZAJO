@@ -1,0 +1,30 @@
+lineamicro:
+    pattern:  /
+    defaults: { _controller: "RutaMicroBundle:LineaMicro:listar" }
+
+lineamicro_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RutaMicroBundle:LineaMicro:show" }
+
+lineamicro_new:
+    pattern:  /new
+    defaults: { _controller: "RutaMicroBundle:LineaMicro:new" }
+
+lineamicro_create:
+    pattern:  /create
+    defaults: { _controller: "RutaMicroBundle:LineaMicro:create" }
+    requirements: { _method: post }
+
+lineamicro_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RutaMicroBundle:LineaMicro:edit" }
+
+lineamicro_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RutaMicroBundle:LineaMicro:update" }
+    requirements: { _method: post|put }
+
+lineamicro_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RutaMicroBundle:LineaMicro:delete" }
+    requirements: { _method: post|delete }

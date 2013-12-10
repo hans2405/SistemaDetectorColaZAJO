@@ -1,0 +1,23 @@
+{% extends '::layout.html.twig' %}
+{% block title %}Iniciar session{% endblock %}
+{% block section%}
+    <h2>{{ block('title') }}</h2>
+<div class="center" style="width:250px">
+
+	<h3>{{ "Accede a tu cuenta"}}</h3>
+
+	{% if error %}
+	<div>{{ error.message}}</div>
+	{% endif %}
+
+	<form action="{{ path('usuario_login_check') }}" method="post">
+		<label>usuario</label>
+		<p><input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="ingrese nombre usuario" /></p>
+		<label>contraseña</label>
+		<p><input type="password" id="password" name="_password"  placeholder="ingrese contraseña" /></p>
+		<input  type="checkbox" id="no_cerrar" name="_remember_me" checked />
+		<label  for="no_cerrar">no cerrar session</label>
+		<button  type="submit" name="login" >acceder</button>
+	</form>
+</div>
+{% endblock %}

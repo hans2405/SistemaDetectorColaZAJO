@@ -1,0 +1,4 @@
+ruta_micro:
+    resource: "@RutaMicroBundle/Resources/config/routing.yml"
+    prefix:   /
+

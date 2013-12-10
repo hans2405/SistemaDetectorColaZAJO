@@ -1,0 +1,720 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables features
+ */
+/* line 5, ../sass/dataTables.scss */
+.dataTables_wrapper {
+  color: #737373;
+  font-size: 11px;
+  position: relative;
+  clear: both;
+  zoom: 1;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #fff;
+  -moz-box-shadow: inset 0px 1px 0px 0px #fff;
+  box-shadow: inset 0px 1px 0px 0px #fff;
+  background: #f8f8f8;
+}
+/* line 15, ../sass/dataTables.scss */
+.dataTables_wrapper label {
+  margin: 0;
+}
+
+/* line 20, ../sass/dataTables.scss */
+.dataTables_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 30px;
+  margin-left: -125px;
+  margin-top: -15px;
+  padding: 14px 0 2px 0;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  background-color: white;
+}
+
+/* line 36, ../sass/dataTables.scss */
+.dataTables_length {
+  width: 30%;
+  float: left;
+  /*margin:5px;*/
+  padding: 5px 10px;
+  /*border:1px solid #d9d9d9;*/
+}
+/* line 42, ../sass/dataTables.scss */
+.dataTables_length .selector {
+  width: 40px;
+}
+/* line 45, ../sass/dataTables.scss */
+.dataTables_length select {
+  border: solid 1px;
+  min-width: 30px !important;
+}
+
+/* line 51, ../sass/dataTables.scss */
+.dataTables_filter {
+  width: 50%;
+  float: right;
+  text-align: right;
+  padding: 5px 10px;
+}
+/* line 56, ../sass/dataTables.scss */
+.dataTables_filter input {
+  color: #737373;
+  padding: 2px;
+  border-color: #9d9d9d #d1d1d1 #ececec;
+  border-width: 1px;
+  border-style: solid;
+  margin: 0;
+  background: #f4f4f4;
+  background: -moz-linear-gradient(top, #f4f4f4 0%, #fefefe 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #fefefe));
+  background: -webkit-linear-gradient(top, #f4f4f4 0%, #fefefe 100%);
+  background: -o-linear-gradient(top, #f4f4f4 0%, #fefefe 100%);
+  background: -ms-linear-gradient(top, #f4f4f4 0%, #fefefe 100%);
+  background: linear-gradient(top, #f4f4f4 0%, #fefefe 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#fefefe', GradientType=0 );
+  -webkit-transition: background 500ms ease;
+  -moz-transition: background 500ms ease;
+  -ms-transition: background 500ms ease;
+  -o-transition: background 500ms ease;
+  transition: background 500ms ease;
+}
+/* line 76, ../sass/dataTables.scss */
+.dataTables_filter input:hover, .dataTables_filter input:focus {
+  -webkit-transition: background 500ms ease;
+  -moz-transition: background 500ms ease;
+  -ms-transition: background 500ms ease;
+  -o-transition: background 500ms ease;
+  transition: background 500ms ease;
+}
+/* line 83, ../sass/dataTables.scss */
+.dataTables_filter input:hover {
+  background: #ededed;
+}
+/* line 86, ../sass/dataTables.scss */
+.dataTables_filter input:focus {
+  background: #e4e4e4;
+  border: 1px solid #D5D5D5;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(213, 213, 213, 0.6);
+}
+
+/* line 94, ../sass/dataTables.scss */
+.dataTables_info {
+  width: 40%;
+  float: left;
+  padding: 10px;
+}
+
+/* line 100, ../sass/dataTables.scss */
+.dataTables_paginate {
+  float: right;
+  text-align: right;
+  padding: 10px 5px 5px 0;
+}
+
+/* Pagination nested */
+/* line 108, ../sass/dataTables.scss */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+  height: 18px;
+  float: left;
+  cursor: pointer;
+  *cursor: hand;
+  line-height: 1.3;
+}
+
+/* line 116, ../sass/dataTables.scss */
+.paginate_disabled_previous:hover, .paginate_enabled_previous:hover, .paginate_disabled_next:hover, .paginate_enabled_next:hover {
+  text-decoration: none !important;
+}
+
+/* line 120, ../sass/dataTables.scss */
+.paginate_disabled_previous:active, .paginate_enabled_previous:active, .paginate_disabled_next:active, .paginate_enabled_next:active {
+  outline: none;
+}
+
+/* line 124, ../sass/dataTables.scss */
+.paginate_disabled_previous, .paginate_disabled_next {
+  color: #cfcecf !important;
+  cursor: default;
+}
+
+/* line 129, ../sass/dataTables.scss */
+.paginate_disabled_previous, .paginate_enabled_previous {
+  padding-left: 23px;
+}
+
+/* line 133, ../sass/dataTables.scss */
+.paginate_disabled_next, .paginate_enabled_next {
+  padding-right: 23px;
+  margin-left: 10px;
+}
+
+/* line 138, ../sass/dataTables.scss */
+.paginate_disabled_previous {
+  background: url(../../../img/general/table/back_disabled.png) no-repeat left center;
+}
+
+/* line 142, ../sass/dataTables.scss */
+.paginate_enabled_previous {
+  background: url(../../../img/general/table/back_enabled.png) no-repeat left center;
+}
+/* line 144, ../sass/dataTables.scss */
+.paginate_enabled_previous:hover {
+  background: url(../../../img/general/table/back_enabled_hover.png) no-repeat left center;
+}
+
+/* line 149, ../sass/dataTables.scss */
+.paginate_disabled_next {
+  background: url(../../../img/general/table/forward_disabled.png) no-repeat top right;
+}
+
+/* line 153, ../sass/dataTables.scss */
+.paginate_enabled_next {
+  background: url(../../../img/general/table/forward_enabled.png) no-repeat top right;
+}
+/* line 155, ../sass/dataTables.scss */
+.paginate_enabled_next:hover {
+  background: url(../../../img/general/table/forward_enabled_hover.png) no-repeat top right;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables display
+ */
+/* line 164, ../sass/dataTables.scss */
+table.display {
+  margin: 0 auto;
+  clear: both;
+  width: 100%;
+  background-color: #fafafa;
+  border-top: 1px solid #D5D5D5;
+}
+/* line 171, ../sass/dataTables.scss */
+table.display thead tr {
+  background-color: #f6f6f6;
+}
+/* line 174, ../sass/dataTables.scss */
+table.display thead th {
+  border-bottom: 1px solid #D5D5D5;
+  border-left: 1px solid #D5D5D5;
+  cursor: pointer;
+  * cursor: hand;
+  vertical-align: middle;
+  font-size: 11px;
+  font-weight: normal;
+  padding: 5px 20px 5px 10px;
+}
+/* line 183, ../sass/dataTables.scss */
+table.display thead th:first-child {
+  border-left: none;
+}
+/* line 188, ../sass/dataTables.scss */
+table.display tfoot th {
+  padding: 3px 18px 3px 10px;
+  border-top: 1px solid #D5D5D5;
+  font-weight: bold;
+}
+/* line 193, ../sass/dataTables.scss */
+table.display tr.heading2 td {
+  border-bottom: 1px solid #aaa;
+}
+/* line 196, ../sass/dataTables.scss */
+table.display td {
+  padding: 7px;
+  border-bottom: 1px solid #D5D5D5;
+  border-left: 1px solid #D5D5D5;
+}
+/* line 200, ../sass/dataTables.scss */
+table.display td:first-child {
+  border-left: none;
+}
+/* line 203, ../sass/dataTables.scss */
+table.display td.center {
+  text-align: center;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+/* line 213, ../sass/dataTables.scss */
+.sorting_asc {
+  background: url(../../../img/general/table/sort_asc.png) no-repeat 99% center;
+}
+/* line 215, ../sass/dataTables.scss */
+.sorting_asc:hover {
+  background: url(../../../img/general/table/sort_asc_hover.png) no-repeat 99% center;
+}
+
+/* line 220, ../sass/dataTables.scss */
+.sorting_desc {
+  background: url(../../../img/general/table/sort_desc.png) no-repeat 99% center;
+}
+/* line 222, ../sass/dataTables.scss */
+.sorting_desc:hover {
+  background: url(../../../img/general/table/sort_desc_hover.png) no-repeat 99% center;
+}
+
+/* line 227, ../sass/dataTables.scss */
+.sorting {
+  background: url(../../../img/general/table/sort_both.png) no-repeat 99% center;
+}
+/* line 229, ../sass/dataTables.scss */
+.sorting:hover {
+  background: url(../../../img/general/table/sort_both_hover.png) no-repeat 99% center;
+}
+
+/* line 234, ../sass/dataTables.scss */
+.sorting_asc_disabled {
+  background: url(../../../img/general/table/sort_asc_disabled.png) no-repeat 99% center;
+}
+
+/* line 238, ../sass/dataTables.scss */
+.sorting_desc_disabled {
+  background: url(../../../img/general/table/sort_desc_disabled.png) no-repeat 99% center;
+}
+
+/* line 242, ../sass/dataTables.scss */
+th:active {
+  outline: none;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+ */
+/* line 251, ../sass/dataTables.scss */
+table.display tr.odd.gradeA {
+  background-color: #ddffdd;
+}
+/* line 254, ../sass/dataTables.scss */
+table.display tr.even.gradeA {
+  background-color: #eeffee;
+}
+/* line 257, ../sass/dataTables.scss */
+table.display tr.odd.gradeC {
+  background-color: #ddddff;
+}
+/* line 260, ../sass/dataTables.scss */
+table.display tr.even.gradeC {
+  background-color: #eeeeff;
+}
+/* line 263, ../sass/dataTables.scss */
+table.display tr.odd.gradeX {
+  background-color: #ffdddd;
+}
+/* line 266, ../sass/dataTables.scss */
+table.display tr.even.gradeX {
+  background-color: #ffeeee;
+}
+/* line 269, ../sass/dataTables.scss */
+table.display tr.odd.gradeU {
+  background-color: #ddd;
+}
+/* line 272, ../sass/dataTables.scss */
+table.display tr.even.gradeU {
+  background-color: #eee;
+}
+
+/* line 278, ../sass/dataTables.scss */
+tr.odd {
+  background-color: #FAFAFA;
+}
+/* line 281, ../sass/dataTables.scss */
+tr.even {
+  background-color: #F3F3F3;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Misc
+ */
+/* line 290, ../sass/dataTables.scss */
+.dataTables_scroll {
+  clear: both;
+}
+
+/* line 294, ../sass/dataTables.scss */
+.dataTables_scrollBody {
+  *margin-top: -1px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 299, ../sass/dataTables.scss */
+.top, .bottom {
+  padding: 15px;
+  background-color: #F5F5F5;
+  border: 1px solid #CCCCCC;
+}
+
+/* line 305, ../sass/dataTables.scss */
+.top .dataTables_info {
+  float: none;
+}
+
+/* line 309, ../sass/dataTables.scss */
+.clear {
+  clear: both;
+}
+
+/* line 313, ../sass/dataTables.scss */
+.dataTables_empty {
+  text-align: center;
+}
+
+/* line 317, ../sass/dataTables.scss */
+tfoot input {
+  margin: 0.5em 0;
+  width: 100%;
+  color: #444;
+}
+/* line 321, ../sass/dataTables.scss */
+tfoot input.search_init {
+  color: #999;
+}
+
+/* line 327, ../sass/dataTables.scss */
+td.group {
+  background-color: #d1cfd0;
+  border-bottom: 2px solid #A19B9E;
+  border-top: 2px solid #A19B9E;
+}
+/* line 332, ../sass/dataTables.scss */
+td.details {
+  background-color: #d1cfd0;
+  border: 2px solid #A19B9E;
+}
+
+/* line 338, ../sass/dataTables.scss */
+.example_alt_pagination div.dataTables_info {
+  width: 40%;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Full Navigation
+ */
+/* line 346, ../sass/dataTables.scss */
+.paging_full_numbers {
+  font-size: 11px;
+  width: 360px;
+  height: 22px;
+  line-height: 22px;
+  padding: 5px;
+}
+/* line 353, ../sass/dataTables.scss */
+.paging_full_numbers a:active {
+  outline: none;
+}
+/* line 356, ../sass/dataTables.scss */
+.paging_full_numbers a:hover {
+  text-decoration: none;
+}
+/* line 359, ../sass/dataTables.scss */
+.paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active {
+  border: 1px solid #D5D5D5;
+  padding: 2px 5px;
+  margin: 0 3px;
+  cursor: pointer;
+  *cursor: hand;
+}
+/* line 366, ../sass/dataTables.scss */
+.paging_full_numbers a.paginate_button {
+  -webkit-box-shadow: inset 0px 1px 0px 0px #fff;
+  -moz-box-shadow: inset 0px 1px 0px 0px #fff;
+  box-shadow: inset 0px 1px 0px 0px #fff;
+  background: #f8f8f8;
+  background: -moz-linear-gradient(top, #f8f8f8 0%, #f3f3f3 99%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f8f8f8), color-stop(99%, #f3f3f3));
+  background: -webkit-linear-gradient(top, #f8f8f8 0%, #f3f3f3 99%);
+  background: -o-linear-gradient(top, #f8f8f8 0%, #f3f3f3 99%);
+  background: -ms-linear-gradient(top, #f8f8f8 0%, #f3f3f3 99%);
+  background: linear-gradient(top, #f8f8f8 0%, #f3f3f3 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f8', endColorstr='#f3f3f3', GradientType=0 );
+}
+/* line 378, ../sass/dataTables.scss */
+.paging_full_numbers a.paginate_button:hover {
+  color: #353535;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #D5D5D5;
+  box-shadow: inset 0px 1px 0px 0px #D5D5D5;
+  background: #ebebeb;
+  background: -moz-linear-gradient(top, #ebebeb 0%, #f4f4f4 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ebebeb), color-stop(100%, #f4f4f4));
+  background: -webkit-linear-gradient(top, #ebebeb 0%, #f4f4f4 100%);
+  background: -o-linear-gradient(top, #ebebeb 0%, #f4f4f4 100%);
+  background: -ms-linear-gradient(top, #ebebeb 0%, #f4f4f4 100%);
+  background: linear-gradient(top, #ebebeb 0%, #f4f4f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#f4f4f4', GradientType=0 );
+}
+/* line 392, ../sass/dataTables.scss */
+.paging_full_numbers a.paginate_active {
+  color: #353535;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #D5D5D5;
+  box-shadow: inset 0px 1px 0px 0px #D5D5D5;
+  background: #ebebeb;
+  background: -moz-linear-gradient(top, #ebebeb 0%, #f4f4f4 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ebebeb), color-stop(100%, #f4f4f4));
+  background: -webkit-linear-gradient(top, #ebebeb 0%, #f4f4f4 100%);
+  background: -o-linear-gradient(top, #ebebeb 0%, #f4f4f4 100%);
+  background: -ms-linear-gradient(top, #ebebeb 0%, #f4f4f4 100%);
+  background: linear-gradient(top, #ebebeb 0%, #f4f4f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#f4f4f4', GradientType=0 );
+}
+/* line 405, ../sass/dataTables.scss */
+.paging_full_numbers a.paginate_button_disabled {
+  background: #fafafa;
+  border: 1px solid #e2e2e2;
+  color: #D5D5D5;
+  cursor: default;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 412, ../sass/dataTables.scss */
+.paging_full_numbers a.paginate_button_disabled:hover {
+  background: #fafafa;
+  border: 1px solid #e2e2e2;
+  color: #D5D5D5;
+  cursor: default;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 425, ../sass/dataTables.scss */
+table.display tr.even.row_selected td {
+  background: #B0BED9;
+}
+/* line 428, ../sass/dataTables.scss */
+table.display tr.odd.row_selected td {
+  background: #9FAFD1;
+}
+
+/*
+ * Sorting classes for columns
+ */
+/* For the standard odd/even */
+/*tr.odd td.sorting_1 { background-color: #D3D6FF; }
+tr.odd td.sorting_2 { background-color: #DADCFF; }
+tr.odd td.sorting_3 { background-color: #E0E2FF; }
+tr.even td.sorting_1 { background-color: #EAEBFF; }
+tr.even td.sorting_2 { background-color: #F2F3FF; }
+tr.even td.sorting_3 { background-color: #F9F9FF; }*/
+/* For the Conditional-CSS grading rows */
+/*
+ 	Colour calculations (based off the main row colours)
+  Level 1:
+		dd > c4
+		ee > d5
+	Level 2:
+	  dd > d1
+	  ee > e2
+ */
+/* line 457, ../sass/dataTables.scss */
+tr.odd.gradeA td.sorting_1 {
+  background-color: #c4ffc4;
+}
+/* line 460, ../sass/dataTables.scss */
+tr.odd.gradeA td.sorting_2, tr.odd.gradeA td.sorting_3 {
+  background-color: #d1ffd1;
+}
+/* line 465, ../sass/dataTables.scss */
+tr.even.gradeA td.sorting_1 {
+  background-color: #d5ffd5;
+}
+/* line 468, ../sass/dataTables.scss */
+tr.even.gradeA td.sorting_2, tr.even.gradeA td.sorting_3 {
+  background-color: #e2ffe2;
+}
+/* line 473, ../sass/dataTables.scss */
+tr.odd.gradeC td.sorting_1 {
+  background-color: #c4c4ff;
+}
+/* line 476, ../sass/dataTables.scss */
+tr.odd.gradeC td.sorting_2, tr.odd.gradeC td.sorting_3 {
+  background-color: #d1d1ff;
+}
+/* line 481, ../sass/dataTables.scss */
+tr.even.gradeC td.sorting_1 {
+  background-color: #d5d5ff;
+}
+/* line 484, ../sass/dataTables.scss */
+tr.even.gradeC td.sorting_2, tr.even.gradeC td.sorting_3 {
+  background-color: #e2e2ff;
+}
+/* line 489, ../sass/dataTables.scss */
+tr.odd.gradeX td.sorting_1 {
+  background-color: #ffc4c4;
+}
+/* line 492, ../sass/dataTables.scss */
+tr.odd.gradeX td.sorting_2, tr.odd.gradeX td.sorting_3 {
+  background-color: #ffd1d1;
+}
+/* line 497, ../sass/dataTables.scss */
+tr.even.gradeX td.sorting_1 {
+  background-color: #ffd5d5;
+}
+/* line 500, ../sass/dataTables.scss */
+tr.even.gradeX td.sorting_2, tr.even.gradeX td.sorting_3 {
+  background-color: #ffe2e2;
+}
+/* line 505, ../sass/dataTables.scss */
+tr.odd.gradeU td.sorting_1 {
+  background-color: #c4c4c4;
+}
+/* line 508, ../sass/dataTables.scss */
+tr.odd.gradeU td.sorting_2, tr.odd.gradeU td.sorting_3 {
+  background-color: #d1d1d1;
+}
+/* line 513, ../sass/dataTables.scss */
+tr.even.gradeU td.sorting_1 {
+  background-color: #d5d5d5;
+}
+/* line 516, ../sass/dataTables.scss */
+tr.even.gradeU td.sorting_2, tr.even.gradeU td.sorting_3 {
+  background-color: #e2e2e2;
+}
+
+/*
+ * Row highlighting example
+ */
+/* line 526, ../sass/dataTables.scss */
+.ex_highlight #example tbody tr.even:hover, #example tbody tr.even td.highlighted {
+  background-color: #ECFFB3;
+}
+
+/* line 530, ../sass/dataTables.scss */
+.ex_highlight #example tbody tr.odd:hover, #example tbody tr.odd td.highlighted {
+  background-color: #E6FF99;
+}
+
+/* line 535, ../sass/dataTables.scss */
+.ex_highlight_row #example tr.even:hover {
+  background-color: #ECFFB3;
+}
+/* line 538, ../sass/dataTables.scss */
+.ex_highlight_row #example tr.even:hover td.sorting_1 {
+  background-color: #DDFF75;
+}
+/* line 541, ../sass/dataTables.scss */
+.ex_highlight_row #example tr.even:hover td.sorting_2 {
+  background-color: #E7FF9E;
+}
+/* line 544, ../sass/dataTables.scss */
+.ex_highlight_row #example tr.even:hover td.sorting_3 {
+  background-color: #E2FF89;
+}
+/* line 549, ../sass/dataTables.scss */
+.ex_highlight_row #example tr.odd:hover {
+  background-color: #E6FF99;
+}
+/* line 552, ../sass/dataTables.scss */
+.ex_highlight_row #example tr.odd:hover td.sorting_1 {
+  background-color: #D6FF5C;
+}
+/* line 555, ../sass/dataTables.scss */
+.ex_highlight_row #example tr.odd:hover td.sorting_2 {
+  background-color: #E0FF84;
+}
+/* line 558, ../sass/dataTables.scss */
+.ex_highlight_row #example tr.odd:hover td.sorting_3 {
+  background-color: #DBFF70;
+}
+
+/*
+ * KeyTable
+ */
+/* line 570, ../sass/dataTables.scss */
+table.KeyTable td {
+  border: 3px solid transparent;
+}
+/* line 572, ../sass/dataTables.scss */
+table.KeyTable td.focus {
+  border: 3px solid #3366FF;
+}
+/* line 577, ../sass/dataTables.scss */
+table.display tr.gradeA {
+  background-color: #eeffee;
+}
+/* line 580, ../sass/dataTables.scss */
+table.display tr.gradeC {
+  background-color: #ddddff;
+}
+/* line 583, ../sass/dataTables.scss */
+table.display tr.gradeX {
+  background-color: #ffdddd;
+}
+/* line 586, ../sass/dataTables.scss */
+table.display tr.gradeU {
+  background-color: #ddd;
+}
+
+/* line 592, ../sass/dataTables.scss */
+div.box {
+  height: 100px;
+  padding: 10px;
+  overflow: auto;
+  border: 1px solid #8080FF;
+  background-color: #E5E5FF;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * jQuery UI specific styling
+ */
+/* line 604, ../sass/dataTables.scss */
+.paging_two_button .ui-button {
+  float: left;
+  cursor: pointer;
+  * cursor: hand;
+}
+
+/* line 610, ../sass/dataTables.scss */
+.paging_full_numbers .ui-button {
+  padding: 2px 6px;
+  margin: 0;
+  cursor: pointer;
+  * cursor: hand;
+  color: #333 !important;
+}
+
+/* line 618, ../sass/dataTables.scss */
+.dataTables_paginate {
+  width: auto;
+}
+/* line 619, ../sass/dataTables.scss */
+.dataTables_paginate .ui-button {
+  margin-right: -0.1em !important;
+}
+
+/* line 626, ../sass/dataTables.scss */
+div.dataTables_wrapper .ui-widget-header {
+  font-weight: normal;
+  border: none;
+  background: none;
+}
+/* line 631, ../sass/dataTables.scss */
+div.dataTables_wrapper .ui-state-default {
+  padding-right: 5px;
+}
+/* line 634, ../sass/dataTables.scss */
+div.dataTables_wrapper .fg-button {
+  height: 16px;
+  line-height: 1.2;
+  padding: 2px 7px;
+}
+/* line 638, ../sass/dataTables.scss */
+div.dataTables_wrapper .fg-button:hover {
+  background: #D5D5D5;
+}
+
+/*
+ * Sort arrow icon positioning
+ */
+/* line 648, ../sass/dataTables.scss */
+table.display thead th div.DataTables_sort_wrapper {
+  position: relative;
+  padding-right: 20px;
+}
+/* line 651, ../sass/dataTables.scss */
+table.display thead th div.DataTables_sort_wrapper span {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: 0;
+}

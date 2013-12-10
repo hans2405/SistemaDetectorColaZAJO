@@ -1,0 +1,39 @@
+{% extends '::layout.html.twig' %}
+{% block title %}Entidad{% endblock %}
+
+{% block section%}
+
+    <table class="table-hover table-condensed">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ entity.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ entity.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Rubro</th>
+                <td>{{ entity.rubro }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('entidad') }}">
+            Volver a la Lista de Entidades
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('entidad_edit', { 'id': entity.id }) }}">
+            Modificar Entidad
+        </a>
+    </li>
+</ul>
+{% endblock %}

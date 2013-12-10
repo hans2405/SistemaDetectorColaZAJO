@@ -1,0 +1,30 @@
+horario:
+    pattern:  /
+    defaults: { _controller: "RutaMicroBundle:Horario:index" }
+
+horario_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RutaMicroBundle:Horario:show" }
+
+horario_new:
+    pattern:  /new
+    defaults: { _controller: "RutaMicroBundle:Horario:new" }
+
+horario_create:
+    pattern:  /create
+    defaults: { _controller: "RutaMicroBundle:Horario:create" }
+    requirements: { _method: post }
+
+horario_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RutaMicroBundle:Horario:edit" }
+
+horario_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RutaMicroBundle:Horario:update" }
+    requirements: { _method: post|put }
+
+horario_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RutaMicroBundle:Horario:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,174 @@
+/**
+ * MacOS X like theme for elFinder.
+ * Required jquery ui "smoothness" theme.
+ *
+ * @author Dmitry (dio) Levashov
+ **/
+/* dialogs */
+/* line 10, ../sass/theme.scss */
+.std42-dialog {
+  background-color: #ededed;
+  background-image: none;
+  background-clip: content-box;
+}
+/* line 14, ../sass/theme.scss */
+.std42-dialog .ui-widget-content {
+  background-color: #ededed;
+  background-image: none;
+  background-clip: content-box;
+}
+
+/* navbar */
+/* line 23, ../sass/theme.scss */
+.elfinder .elfinder-navbar {
+  background: #fafafa;
+}
+
+/* line 28, ../sass/theme.scss */
+.elfinder-navbar .ui-state-hover {
+  background: transparent;
+  border-color: transparent;
+}
+/* line 32, ../sass/theme.scss */
+.elfinder-navbar .ui-state-active {
+  background: #909090;
+  border-color: #909090;
+  color: #fff;
+}
+
+/* disabled elfinder */
+/* line 41, ../sass/theme.scss */
+.elfinder-disabled .elfinder-navbar .ui-state-active {
+  background: #dadada;
+  border-color: #dadada;
+  color: #606060;
+}
+
+/* current directory */
+/* selected file in "icons" view */
+/* line 50, ../sass/theme.scss */
+.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-hover {
+  background: #ccc;
+}
+
+/* list view*/
+/* line 56, ../sass/theme.scss */
+.elfinder-cwd table tr {
+  border-top: 1px solid #fff;
+}
+/* line 57, ../sass/theme.scss */
+.elfinder-cwd table tr:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+
+/* common selected background/color */
+/* line 65, ../sass/theme.scss */
+.elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover, .elfinder-cwd table td.ui-state-hover, .elfinder-button-menu .ui-state-hover {
+  background: #909090;
+  color: #fff;
+}
+
+/* disabled elfinder */
+/* line 73, ../sass/theme.scss */
+.elfinder-disabled .elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover, .elfinder-disabled .elfinder-cwd table td.ui-state-hover {
+  background: #dadada;
+}
+
+/* statusbar */
+/* line 80, ../sass/theme.scss */
+.elfinder .elfinder-statusbar {
+  color: #555;
+}
+/* line 82, ../sass/theme.scss */
+.elfinder .elfinder-statusbar a {
+  text-decoration: none;
+  color: #555;
+}
+
+/* line 88, ../sass/theme.scss */
+.std42-dialog .elfinder-help {
+  background: #fff;
+}
+/* line 90, ../sass/theme.scss */
+.std42-dialog .elfinder-help .ui-widget-content {
+  background: #fff;
+}
+
+/* contextmenu */
+/* line 97, ../sass/theme.scss */
+.elfinder-contextmenu .ui-state-hover {
+  background: #3875d7;
+  color: #fff;
+}
+/* line 100, ../sass/theme.scss */
+.elfinder-contextmenu .ui-state-hover .elfinder-contextmenu-arrow {
+  background-image: url(../../../img/general/filemanager/arrows-active.png);
+}
+
+/* line 105, ../sass/theme.scss */
+.elfinder {
+  font-size: 15px;
+}
+
+/* search */
+/* line 111, ../sass/theme.scss */
+.elfinder-button-search input {
+  color: #737373;
+  padding: 1px 20px;
+  font-size: 11px;
+  border-color: #9d9d9d #d1d1d1 #ececec;
+  border-width: 1px;
+  border-style: solid;
+  background: #f4f4f4;
+  margin-bottom: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transition: background 500ms ease;
+  -moz-transition: background 500ms ease;
+  -ms-transition: background 500ms ease;
+  -o-transition: background 500ms ease;
+  transition: background 500ms ease;
+}
+/* line 128, ../sass/theme.scss */
+.elfinder-button-search input:hover, .elfinder-button-search input:focus {
+  -webkit-transition: background 500ms ease;
+  -moz-transition: background 500ms ease;
+  -ms-transition: background 500ms ease;
+  -o-transition: background 500ms ease;
+  transition: background 500ms ease;
+}
+/* line 135, ../sass/theme.scss */
+.elfinder-button-search input:hover {
+  background: #ededed;
+}
+/* line 138, ../sass/theme.scss */
+.elfinder-button-search input:focus {
+  background: #e4e4e4;
+}
+
+/* line 143, ../sass/theme.scss */
+.ui-widget-content {
+  border: none;
+}
+
+/* line 147, ../sass/theme.scss */
+.ui-dialog {
+  border: 1px solid #D5D5D5;
+}
+
+/* line 151, ../sass/theme.scss */
+.elfinder-buttonset {
+  float: none;
+}
+
+/* line 156, ../sass/theme.scss */
+.elfinder-button:first-child {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+/* line 160, ../sass/theme.scss */
+.elfinder-button:last-child {
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}

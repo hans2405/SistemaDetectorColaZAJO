@@ -1,0 +1,43 @@
+Taller\RutaMicroBundle\Entity\Ruta:
+    type: entity
+    table: ruta
+    repositoryClass: Taller\RutaMicroBundle\Entity\RutaRepository
+    fields:
+        id:
+            id: true
+            type: integer
+            unsigned: false
+            nullable: false
+            generator:
+                strategy: IDENTITY
+        posicion:
+            type: string
+            length: 245
+            fixed: false
+            nullable: true
+        latitud:
+            type: float
+            nullable: true
+        longitud:
+            type: float
+            nullable: true
+    manyToOne:
+        calle:
+            targetEntity: Calle
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                calle_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        lineaMicro:
+            targetEntity: LineaMicro
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                linea_micro_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

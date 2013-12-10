@@ -1,0 +1,19 @@
+{% extends '::layout.html.twig' %}
+{% block title %}Registrar Servicio{% endblock %}
+{% block section %}
+
+    <form action="{{ path('servicio_create') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+        <p>
+            <button class="btn btn-primary" type="submit">Registrar</button>
+        </p>
+    </form>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('servicio') }}">
+             Volver a la Lista de Servicios
+        </a>
+    </li>
+</ul>
+{% endblock %}

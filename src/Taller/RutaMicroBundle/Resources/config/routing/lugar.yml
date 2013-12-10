@@ -1,0 +1,30 @@
+lugar:
+    pattern:  /
+    defaults: { _controller: "RutaMicroBundle:Lugar:index" }
+
+lugar_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RutaMicroBundle:Lugar:show" }
+
+lugar_new:
+    pattern:  /new
+    defaults: { _controller: "RutaMicroBundle:Lugar:new" }
+
+lugar_create:
+    pattern:  /create
+    defaults: { _controller: "RutaMicroBundle:Lugar:create" }
+    requirements: { _method: post }
+
+lugar_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RutaMicroBundle:Lugar:edit" }
+
+lugar_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RutaMicroBundle:Lugar:update" }
+    requirements: { _method: post|put }
+
+lugar_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RutaMicroBundle:Lugar:delete" }
+    requirements: { _method: post|delete }

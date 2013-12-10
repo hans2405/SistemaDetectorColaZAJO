@@ -1,0 +1,30 @@
+calle:
+    pattern:  /
+    defaults: { _controller: "RutaMicroBundle:Calle:index" }
+
+calle_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "RutaMicroBundle:Calle:show" }
+
+calle_new:
+    pattern:  /new
+    defaults: { _controller: "RutaMicroBundle:Calle:new" }
+
+calle_create:
+    pattern:  /create
+    defaults: { _controller: "RutaMicroBundle:Calle:create" }
+    requirements: { _method: post }
+
+calle_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "RutaMicroBundle:Calle:edit" }
+
+calle_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "RutaMicroBundle:Calle:update" }
+    requirements: { _method: post|put }
+
+calle_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "RutaMicroBundle:Calle:delete" }
+    requirements: { _method: post|delete }
